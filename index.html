@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles/card.css">
+
+  <title>SHOP</title>
+</head>
+
+<body>
+  <header class="bg-rounded-lg shadow bg-gray-900">
+    <div class="container">
+      <nav class=" bg-rounded-lg shadow bg-gray-900">
+        <div class="logo">
+          LOGO
+        </div>
+        <div class="relative">
+          <form>
+            <div class="flex">
+              <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
+                Email</label>
+              <button id="dropdown-button" data-dropdown-toggle="dropdown"
+                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                type="button">All categories
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="dropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 flex flex-col"
+                  aria-labelledby="dropdown-button">
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white btn_cotegoriyes">Smartphone</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white  btn_cotegoriyes">Acsesuar</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white  btn_cotegoriyes">Clothes</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white  btn_cotegoriyes">Laptop</button>
+                  </li>
+                  <li class="border border-white">
+                    <button type="button"
+                      class="block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white  btn_cotegoriyes text-blue-500 text-center text-lg">Reset
+                      all</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="relative w-full">
+                <input type="search" id="search-dropdown"
+                  class="block p-2.5 w-[400px] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500 input-search"
+                  placeholder="Search Mockups, Logos, Design Templates..." required>
+                <button type="submit"
+                  class="absolute top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <i class="bi bi-search text-1xl"></i>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+
+        </div>
+        <div class="navigation">
+          <button type="button"
+            class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            id="btn1">
+            <i class="bi bi-cart2" id="icon"></i>
+            <span class="sr-only">Notifications</span>
+            <div
+              class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 corzinka">
+              0</div>
+          </button>
+
+          <button type="button"
+            class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            id="btn2">
+            <i class="bi bi-heart"></i>
+            <span class="sr-only">Notifications</span>
+            <div
+              class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 "
+              id="like_number2">
+              0</div>
+          </button>
+          <button type="button"
+            class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            id="btn3">
+            <i class="bi bi-telephone"></i>
+            <span class="sr-only">Notifications</span>
+            <div
+              class="absolute inline-flex items-center justify-center w-6 h-6 text-xs text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900  animate-bounce font-[900] ">
+              <span class="text-xl">
+                !
+              </span>
+            </div>
+          </button>
+        </div>
+      </nav>
+      <hr>
+      <nav class="">
+        <div class="left">
+          <span class="location">
+
+          </span>
+
+        </div>
+
+        <div class="right flex gap-5 items-center">
+
+          <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button">
+            Price Sorting
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 10 6">
+              <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg></button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownHelper"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHelperButton">
+
+
+              <div class="relative flex flex-col gap-5 w-full">
+                <input type="range" id="price-range" name="price-range" min="0" max="10000" step="200" value="0"
+                  class="block">
+                <span id="price-value" class="bg-gray-800 text-white py-2 px-4 rounded-md  block">0</span>
+              </div>
+
+
+            </ul>
+          </div>
+
+          <button id="dropdownHelper" data-dropdown-toggle="dropdownHe"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button">
+            Category Sorting
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 10 6">
+              <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg></button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownHe"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+            <div class="p-3 text-sm text-gray-700 dark:text-gray-200 flex items-center" aria-labelledby="dropdownHe">
+
+              <ul class="w-full flex flex-wrap items-center">
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex  items-center pl-3">
+                    <input id="vue-checkbox" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 checkbox ">
+                    <label for="vue-checkbox"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" id="true">MobilePhone</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="react-checkbox" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500  checkbox">
+                    <label for="react-checkbox"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laptop</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="angular-checkbox" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500  checkbox">
+                    <label for="angular-checkbox"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Acsesuar</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="laravel-checkbox" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 checkbox ">
+                    <label for="laravel-checkbox"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Clothes</label>
+                  </div>
+                </li>
+
+              </ul>
+
+              <ul class="w-full flex flex-wrap items-center">
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex  items-center pl-3">
+                    <input id="vue-checkbox2" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 checkbox">
+                    <label for="vue-checkbox2"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">?</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="react-checkbox2" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500  checkbox">
+                    <label for="react-checkbox2"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">?</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="angular-checkbox2" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 checkbox">
+                    <label for="angular-checkbox2"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">?</label>
+                  </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                  <div class="flex items-center pl-3">
+                    <input id="laravel-checkbox2" type="checkbox" value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500  checkbox">
+                    <label for="laravel-checkbox2"
+                      class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">?</label>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+          <button id="dropdownHelper" data-dropdown-toggle="dropdownCo"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button">
+            Color Sorting
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 10 6">
+              <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg></button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownCo"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+            <div class="p-3 text-sm text-gray-700 dark:text-gray-200 flex items-center" aria-labelledby="dropdownCo">
+
+
+              <ul class="w-full flex flex-wrap items-center justify-center">
+                <li class="rounded-full w-[30px] h-[30px] bg-blue-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-pink-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-red-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-gray-900 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-violet-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-amber-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-yellow-700 hover:animate-ping"></li>
+                <li class="rounded-full w-[30px] h-[30px] bg-green-700 hover:animate-ping"></li>
+                </ul>
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="modal-search">
+
+    <ul class="modal-list">
+    </ul>
+
+  </div>
+
+  <main>
+
+    <section class="section-banner">
+
+      <div class="swiper-header">
+        <div class="swiper-wrapper">
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="text-gray-600 body-font section-text">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-[yellow] main-text">Master Cleanse Reliac
+            Heirloom</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed mt-5 font-bold text-base">Whatever cardigan tote bag tumblr hexagon
+            brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them
+            man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+        </div>
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-yellow-200 px-4 py-6 rounded-lg section-mini-card-text ">
+              <i class="bi bi-truck text-indigo-500 w-12 h-12 mb-3 inline-block text-5xl"></i>
+              <h2
+                class="title-font font-medium text-3xl text-gray-900 section-mini-card-text   section-mini-card-text  ">
+                0 $</h2>
+              <p class="leading-relaxed mt-5 font-bold">Free Delivery</p>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg section-mini-card-text section-mini-card-text">
+              <svg fill="black" stroke="yellow" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+              </svg>
+              <h2
+                class="title-font font-medium text-3xl text-gray-900 section-mini-card-text   section-mini-card-text  ">
+                1.3K</h2>
+              <p class="leading-relaxed mt-5 font-bold">Users</p>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg section-mini-card-text section-mini-card-text">
+              <svg fill="black" stroke="yellow" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                <path
+                  d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z">
+                </path>
+              </svg>
+              <h2
+                class="title-font font-medium text-3xl text-gray-900 section-mini-card-text   section-mini-card-text  ">
+                24/7</h2>
+              <p class="leading-relaxed mt-5 font-bold">Call Center</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg section-mini-card-text section-mini-card-text">
+              <i class="bi bi-earbuds  text-indigo-500 w-12 h-12 mb-3 inline-block text-5xl"></i>
+              <h2 class="title-font font-medium text-3xl text-gray-900 section-mini-card-text  ">1000+</h2>
+              <p class="leading-relaxed mt-5 font-bold">Products</p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section-wrapper">
+
+
+      <div class="wraper container">
+
+      </div>
+
+    </section>
+
+
+    <section class="mackap mt-[100p]">
+
+      <div class="relative overflow-hidden">
+        <div class=pt-10 pb-14 sm:pt-16 lg:overflow-hidden lg:pt-24 lg:pb-24">
+          <div class="mx-auto max-w-5xl lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-[300px] ">
+              <div
+                class="mx-auto max-w-md px-4 text-center sm:max-w-2xl sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
+                <div class="lg:py-24">
+                  <h1 class="mt-4 text-4xl font-bold tracking-tight text-black sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span class="block text-white-500">Introducing </span><span
+                      class="block text-yellow loadingtext">Landing Website</span>
+                  </h1>
+                  <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Our Website will
+                    launch soon. Join the waitlist to try the beta before it's publicly available.</p>
+                  <div class="mt-10 sm:mt-12">
+
+                    <!-- This is a working waitlist form. Create your access key from https://web3forms.com/s to setup.  -->
+                    <form class="sm:mx-auto sm:max-w-xl lg:mx-0" action="https://api.web3forms.com/submit">
+                      <div class="sm:flex">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEy_HERE">
+                        <input type="hidden" name="subject" value="New Waitlist">
+                        <div class="min-w-0 flex-1"><label for="email" class="sr-only">Email address</label><input
+                            id="email" type="email" placeholder="Enter your email"
+                            class="block w-full rounded-md border-0 bg-gray-200 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            value="" autocomplete="off" /></div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3"><button type="submit"
+                            class="block w-full rounded-md bg-[yellow] py-3 px-4 font-medium text-black shadow hover:bg-yellow-500 hover: shadow-lg shadow-yellow-500/50 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-gray-900">Join
+                            Waitlist</button></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
+                <div
+                  class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg">
+                </div>
+                <div
+                  class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg">
+                </div>
+                <div
+                  class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg">
+                </div>
+                <div
+                  class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg">
+                </div>
+                <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+                  <!-- <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt=""> -->
+
+                  <div class="swiper mySwiper6">
+                    <div class="swiper-wrapper mockup-swiper">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <div class="modal bg-rounded-lg shadow bg-gray-900">
+
+    <div class="modal-btn">
+
+      <h1>Shopping Bag</h1>
+
+      <button id="btn"><i class="bi bi-x"></i></button>
+
+
+    </div>
+
+
+    <div class="card-modal">
+
+
+
+    </div>
+
+
+    <div class="modal-footer ">
+
+      <div class="oop">
+        <button class="btn-modal-class" id="btnmodal">купить</button>
+        <h2 class="btn-modal-class" id="total">Total: 000 $</h2>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="modal-like bg-rounded-lg shadow bg-gray-900">
+
+    <div class="modal-btn">
+
+      <h1>Like Bag</h1>
+
+      <button id="btn000"><i class="bi bi-x"></i></button>
+
+
+    </div>
+
+
+    <div class="card-modal2">
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <div class="registration-modal bg-rounded-lg shadow bg-gray-900">
+    <button class="btn-reg"><i class="bi bi-x"></i></button>
+
+    <form action="">
+
+      <div class="login-user">
+        <h1>Submit Form</h1>
+
+        <input type="text" placeholder="first-name" class="adres-modal">
+
+        <input type="text" placeholder="user-name" class="adres-modal">
+
+      </div>
+
+      <div class="user-information">
+
+        <input type="text" value="+998" required class="adres-modal">
+
+        <input type="text" placeholder="user-addres" required class="adres-modal">
+
+        <button id="next">NEXT</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <div class="coll-center">
+
+
+
+  </div>
+
+
+
+
+  <footer class="bg-white rounded-lg shadow dark:bg-gray-900 mt-[30px]">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+          class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./telegram/telegram.js" type="module"></script>
+  <script src="./swiper.js" type="module"></script>
+  <script src="./data.js" type="module"></script>
+  <script src="./app.js" type="module"></script>
+</body>
+
+</html>
